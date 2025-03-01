@@ -18,7 +18,7 @@ format:
     logo: imgs/cornell_logo.png
 ---
 
-## Introduction's
+## Introductions
 
 -   Professor Tyler George
 
@@ -28,11 +28,12 @@ format:
 
 -   Who has a favorite Star Wars quote?
 
--   Would you say that quote is positive or negative? 
+-   Would you say that quote is positive or negative?
 
 -   Famous quotes, according to [The Hollywood Reporter](https://www.hollywoodreporter.com/lists/best-star-wars-quotes/may-the-force-be-with-you-3/)
-    * Luke, I am your father
-    * Just kidding, that is not actually the real quote! 
+
+    -   Luke, I am your father
+    -   Just kidding, that is not the real quote!
 
 ## Text Analysis
 
@@ -42,7 +43,7 @@ format:
 
 ## Sentiment Analysis
 
--   Today you will all be trying your hand at a type of text analysis called **sentiment analysis**.
+-   Today, you will all be trying your hand at a type of text analysis called **sentiment analysis**.
 
 -   Any educated guesses on what **sentiment analysis** is?
 
@@ -58,23 +59,23 @@ format:
 
 -   Fill in the table with each word of your quotes on the left and their sentiment (positive or negative) on the right.
 
--   Count the number of positives and negatives and write your totals at the bottom.
+-   Count the positives and negatives and write your totals at the bottom.
 
--   Scan the QR code and enter your movie (IV, V, or VI). Then, you'll see the number of positive sentiment words and negative sentiment words in your quotes.
-    
-    - If extra sheets are lying around, feel free to work on those quotes, too!
-    
-    - You can also respond at [bit.ly/SWTDASent](bit.ly/SWTDASent).
+-   Scan the QR code and enter your movie (IV, V, or VI) and the number of positive sentiment words and negative sentiment words in your quote(s).
 
-:::{.notes}
+    -   If extra sheets are lying around, feel free to work on those quotes, too!
+
+    -   You can also respond at [bit.ly/SWTDASent](bit.ly/SWTDASent).
+
+::: notes
 Show the live plots being filled with data in Google Forms.
 :::
 
 ## Let's Dive Deeper {.smaller}
 
--   What would we need to do if we wanted to understand the sentiment of a character or a movie as a whole?
+-   What would we need to do to understand the sentiment of a character or a movie?
 
--   At each table is 1 computer connected to the TVs at those desks.
+-   At each table is one computer connected to the TVs at those desks.
 
 -   Each computer has a program called RStudio on the screen, which allows you to program in the language R.
 
@@ -84,38 +85,32 @@ Show the live plots being filled with data in Google Forms.
 
 A *row* of a dataset runs left to right. A *column* of a dataset is verticle (think the lettered columns in a Google Sheet).
 
-- filter: This function is keeping rows with words spoken by "Vader"
+-   filter: This function keeps rows with words spoken by "Vader"
 
-- count: This function is counting how many times each word appeared
+-   count: This function counts how many times each word appeared
 
-- group_by and slice_max: These functions are taking the counts, keeping the top 5 most common words that have positive sentiment and that have negative sentiment. 
-
-
-
-
-
+-   group_by and slice_max: These functions are taking the counts, keeping the top 5 most common words that have positive sentiment and that have negative sentiment.
 
 ## A More Advanced Analysis
 
-- Dennis Bakhuis scraped all of Wookipedias information on Star Wars
+-   Dennis Bakhuis scraped all of Wookipedias information on Star Wars
 
-- He posted all of his work [HERE](https://github.com/dennisbakhuis/wookieepediascience). 
+-   He posted all of his work [HERE](https://github.com/dennisbakhuis/wookieepediascience).
 
-- One amazing result is a [network plot](https://dennisbakhuis.github.io/wookieepediascience/).
+-   One fantastic result is a [network plot](https://dennisbakhuis.github.io/wookieepediascience/).
 
 ## Data Science and Statistics at Cornell
 
-- Courses take advantage of the block plan were we can learn and practice a concept in class.
+-   Courses take advantage of the block plan, where we can learn and practice a concept in class.
 
-- Interactive labs in most of our major courses. 
+-   Interactive labs in most of our major courses.
 
-- Competitions, conferneces, socials and more. 
+-   Competitions, conferences, socials and more.
 
+## Acknowledgments
 
-## Acknowledgements
+-   Star Wars is owned by Lucasfilms. I do not have any rights to this information.
 
-- Star Wars is owned by Lucasfilms. I do not own any of the rights to this information.
+-   [Tidy Text](https://www.tidytextmining.com/) by Julia Silge and David Robinson
 
-- [Tidy Text](https://www.tidytextmining.com/) by Julia Silge and David Robinson
-
-- [Kaggle Report](https://www.kaggle.com/code/xvivancos/analyzing-star-wars-movie-scripts/report) by Xavier Vivancos García
+-   [Kaggle Report](https://www.kaggle.com/code/xvivancos/analyzing-star-wars-movie-scripts/report) by Xavier Vivancos García

@@ -24,15 +24,15 @@
     "objectID": "SWExplore.html#introductions",
     "href": "SWExplore.html#introductions",
     "title": "Star Wars: The Data Awakens",
-    "section": "Introduction’s",
-    "text": "Introduction’s\n\nProfessor Tyler George\nStudent Robin Gillette"
+    "section": "Introductions",
+    "text": "Introductions\n\nProfessor Tyler George\nStudent Robin Gillette"
   },
   {
     "objectID": "SWExplore.html#famous-quotes",
     "href": "SWExplore.html#famous-quotes",
     "title": "Star Wars: The Data Awakens",
     "section": "Famous Quotes",
-    "text": "Famous Quotes\n\nWho has a favorite Star Wars quote?\nWould you say that quote is positive or negative?\nFamous quotes, according to The Hollywood Reporter\n\nLuke, I am your father\nJust kidding, that is not actually the real quote!"
+    "text": "Famous Quotes\n\nWho has a favorite Star Wars quote?\nWould you say that quote is positive or negative?\nFamous quotes, according to The Hollywood Reporter\n\nLuke, I am your father\nJust kidding, that is not the real quote!"
   },
   {
     "objectID": "SWExplore.html#text-analysis",
@@ -46,7 +46,7 @@
     "href": "SWExplore.html#sentiment-analysis",
     "title": "Star Wars: The Data Awakens",
     "section": "Sentiment Analysis",
-    "text": "Sentiment Analysis\n\nToday you will all be trying your hand at a type of text analysis called sentiment analysis.\nAny educated guesses on what sentiment analysis is?"
+    "text": "Sentiment Analysis\n\nToday, you will all be trying your hand at a type of text analysis called sentiment analysis.\nAny educated guesses on what sentiment analysis is?"
   },
   {
     "objectID": "SWExplore.html#activity",
@@ -60,28 +60,28 @@
     "href": "SWExplore.html#activity-instructions",
     "title": "Star Wars: The Data Awakens",
     "section": "Activity Instructions",
-    "text": "Activity Instructions\n\nFill in the table with each word of your quotes on the left and their sentiment (positive or negative) on the right.\nCount the number of positives and negatives and write your totals at the bottom.\nScan the QR code and enter your movie (IV, V, or VI). Then, you’ll see the number of positive sentiment words and negative sentiment words in your quotes.\n\nIf extra sheets are lying around, feel free to work on those quotes, too!\nYou can also respond at bit.ly/SWTDASent.\n\n\n\nShow the live plots being filled with data in Google Forms."
+    "text": "Activity Instructions\n\nFill in the table with each word of your quotes on the left and their sentiment (positive or negative) on the right.\nCount the positives and negatives and write your totals at the bottom.\nScan the QR code and enter your movie (IV, V, or VI) and the number of positive sentiment words and negative sentiment words in your quote(s).\n\nIf extra sheets are lying around, feel free to work on those quotes, too!\nYou can also respond at bit.ly/SWTDASent.\n\n\n\nShow the live plots being filled with data in Google Forms."
   },
   {
     "objectID": "SWExplore.html#lets-dive-deeper",
     "href": "SWExplore.html#lets-dive-deeper",
     "title": "Star Wars: The Data Awakens",
     "section": "Let’s Dive Deeper",
-    "text": "Let’s Dive Deeper\n\nWhat would we need to do if we wanted to understand the sentiment of a character or a movie as a whole?\nAt each table is 1 computer connected to the TVs at those desks.\nEach computer has a program called RStudio on the screen, which allows you to program in the language R.\nR is a statistical analysis programming language and is one of the two most common languages in the field of data science (Python is the other)"
+    "text": "Let’s Dive Deeper\n\nWhat would we need to do to understand the sentiment of a character or a movie?\nAt each table is one computer connected to the TVs at those desks.\nEach computer has a program called RStudio on the screen, which allows you to program in the language R.\nR is a statistical analysis programming language and is one of the two most common languages in the field of data science (Python is the other)"
   },
   {
     "objectID": "SWExplore.html#what-you-will-need",
     "href": "SWExplore.html#what-you-will-need",
     "title": "Star Wars: The Data Awakens",
     "section": "What you will need…",
-    "text": "What you will need…\nA row of a dataset runs left to right. A column of a dataset is verticle (think the lettered columns in a Google Sheet).\n\nfilter: This function is keeping rows with words spoken by “Vader”\ncount: This function is counting how many times each word appeared\ngroup_by and slice_max: These functions are taking the counts, keeping the top 5 most common words that have positive sentiment and that have negative sentiment."
+    "text": "What you will need…\nA row of a dataset runs left to right. A column of a dataset is verticle (think the lettered columns in a Google Sheet).\n\nfilter: This function keeps rows with words spoken by “Vader”\ncount: This function counts how many times each word appeared\ngroup_by and slice_max: These functions are taking the counts, keeping the top 5 most common words that have positive sentiment and that have negative sentiment."
   },
   {
     "objectID": "SWExplore.html#a-more-advanced-analysis",
     "href": "SWExplore.html#a-more-advanced-analysis",
     "title": "Star Wars: The Data Awakens",
     "section": "A More Advanced Analysis",
-    "text": "A More Advanced Analysis\n\nDennis Bakhuis scraped all of Wookipedias information on Star Wars\nHe posted all of his work HERE.\nOne amazing result is a network plot."
+    "text": "A More Advanced Analysis\n\nDennis Bakhuis scraped all of Wookipedias information on Star Wars\nHe posted all of his work HERE.\nOne fantastic result is a network plot."
   },
   {
     "objectID": "SWExplore.html#acknowledgements",
@@ -95,6 +95,13 @@
     "href": "SWExplore.html#data-science-and-statistics-at-cornell",
     "title": "Star Wars: The Data Awakens",
     "section": "Data Science and Statistics at Cornell",
-    "text": "Data Science and Statistics at Cornell\n\nCourses take advantage of the block plan were we can learn and practice a concept in class.\nInteractive labs in most of our major courses.\nCompetitions, conferneces, socials and more."
+    "text": "Data Science and Statistics at Cornell\n\nCourses take advantage of the block plan, where we can learn and practice a concept in class.\nInteractive labs in most of our major courses.\nCompetitions, conferences, socials and more."
+  },
+  {
+    "objectID": "SWExplore.html#acknowledgments",
+    "href": "SWExplore.html#acknowledgments",
+    "title": "Star Wars: The Data Awakens",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\n\nStar Wars is owned by Lucasfilms. I do not have any rights to this information.\nTidy Text by Julia Silge and David Robinson\nKaggle Report by Xavier Vivancos García"
   }
 ]
