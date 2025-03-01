@@ -1,10 +1,9 @@
 ---
 title: "Star Wars: The Data Awakens "
 subtitle: "Welcome to Cornell College!"
-author: Tyler George
 format: 
   revealjs:
-    footer: "Slides at [bit.ly/MVHS-C-DS](https://bit.ly/MVHS-C-DS)"
+    footer: "Slides at [bit.ly/SWTDASlides](https://bit.ly/SWTDASlides)"
     theme: custom.scss
     transition: fade
     slide-number: true
@@ -103,6 +102,14 @@ A *row* of a dataset runs left to right. A *column* of a dataset is verticle (th
 - He posted all of his work [HERE](https://github.com/dennisbakhuis/wookieepediascience). 
 
 - One amazing result is a [network plot](https://dennisbakhuis.github.io/wookieepediascience/).
+
+## Data Science and Statistics at Cornell
+
+- Courses take advantage of the block plan were we can learn and practice a concept in class.
+
+- Interactive labs in most of our major courses. 
+
+- Competitions, conferneces, socials and more. 
 
 
 ## Acknowledgements

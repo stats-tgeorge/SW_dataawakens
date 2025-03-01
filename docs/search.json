@@ -11,14 +11,14 @@
     "href": "readme.html",
     "title": "Star Wars: The Data Awakens",
     "section": "",
-    "text": "This repo is files for a short (45 min) session for prespective students visiting Cornell College for STEM Day.\n\n\n\n\n\n\nStar Wars is owned by Lucasfilms. I do not own any of the rights to this information.\nTidy Text by Julia Silge and David Robinson\nKaggle Report by Xavier Vivancos García\nDennis Bakhuis"
+    "text": "This repo is files for a short (45 min) session for prespective students visiting Cornell College for STEM Day.\nAuthor: Tyler George\nSlides: https://stats-tgeorge.github.io/SW_dataawakens/SWExplore\n\n\n\nStar Wars is owned by Lucasfilms. I do not own any of the rights to this information.\nTidy Text by Julia Silge and David Robinson\nKaggle Report by Xavier Vivancos García\nDennis Bakhuis"
   },
   {
     "objectID": "readme.html#star-wars-the-data-awakens",
     "href": "readme.html#star-wars-the-data-awakens",
     "title": "Star Wars: The Data Awakens",
     "section": "",
-    "text": "This repo is files for a short (45 min) session for prespective students visiting Cornell College for STEM Day.\n\n\n\n\n\n\nStar Wars is owned by Lucasfilms. I do not own any of the rights to this information.\nTidy Text by Julia Silge and David Robinson\nKaggle Report by Xavier Vivancos García\nDennis Bakhuis"
+    "text": "This repo is files for a short (45 min) session for prespective students visiting Cornell College for STEM Day.\nAuthor: Tyler George\nSlides: https://stats-tgeorge.github.io/SW_dataawakens/SWExplore\n\n\n\nStar Wars is owned by Lucasfilms. I do not own any of the rights to this information.\nTidy Text by Julia Silge and David Robinson\nKaggle Report by Xavier Vivancos García\nDennis Bakhuis"
   },
   {
     "objectID": "SWExplore.html#introductions",
@@ -89,5 +89,12 @@
     "title": "Star Wars: The Data Awakens",
     "section": "Acknowledgements",
     "text": "Acknowledgements\n\nStar Wars is owned by Lucasfilms. I do not own any of the rights to this information.\nTidy Text by Julia Silge and David Robinson\nKaggle Report by Xavier Vivancos García"
+  },
+  {
+    "objectID": "SWExplore.html#data-science-and-statistics-at-cornell",
+    "href": "SWExplore.html#data-science-and-statistics-at-cornell",
+    "title": "Star Wars: The Data Awakens",
+    "section": "Data Science and Statistics at Cornell",
+    "text": "Data Science and Statistics at Cornell\n\nCourses take advantage of the block plan were we can learn and practice a concept in class.\nInteractive labs in most of our major courses.\nCompetitions, conferneces, socials and more."
   }
 ]

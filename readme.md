@@ -2,7 +2,10 @@
 
 This repo is files for a short (45 min) session for prespective students visiting Cornell College for STEM Day. 
 
-#### Author: Tyler George
+Author: Tyler George
+
+Slides: <https://stats-tgeorge.github.io/SW_dataawakens/SWExplore>
+
 
 #### References
 
