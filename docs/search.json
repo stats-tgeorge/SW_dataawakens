@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "SWParticipant_File_Answers.html",
+    "href": "SWParticipant_File_Answers.html",
+    "title": "Star Wars at Cornell",
+    "section": "",
+    "text": "To start, we want to investigate what you did by hand; how many words in each film were positive? How many were negative?\n\nCounting Sentiments for Each Film\nThe following code can be run by clicking the green play button on the right.\nThis first part gets the sentiments from a dictionary, just like you did!\n\nsentiments &lt;- \n  SW_movie_scripts |&gt; \n  inner_join(get_sentiments('bing')) # This does what you did for each word for every line in the original 3 films\n\nJoining with `by = join_by(word)`\n\nsentiments  |&gt; slice_head(n=5) |&gt; kable()\n\n\n\n\ncharacter\nmovie\nword\nsentiment\n\n\n\n\nThreepio\nEpisode IV\nmadness\nnegative\n\n\nThreepio\nEpisode IV\ndoomed\nnegative\n\n\nThreepio\nEpisode IV\nbetter\npositive\n\n\nThreepio\nEpisode IV\ntrust\npositive\n\n\nImperial Officer\nEpisode IV\ndeath\nnegative\n\n\n\n\n\nNow, the count function counts how many positive and negative words for each film.\n\nsentiment_counts &lt;-\n  sentiments |&gt; \n  count(movie,sentiment) # Adds up each positive and negative for each film\n\nsentiment_counts |&gt; slice_head(n=5) |&gt; kable()\n\n\n\n\nmovie\nsentiment\nn\n\n\n\n\nEpisode IV\nnegative\n322\n\n\nEpisode IV\npositive\n391\n\n\nEpisode V\nnegative\n269\n\n\nEpisode V\npositive\n338\n\n\nEpisode VI\nnegative\n268\n\n\n\n\n\n\n\nVisualizing Sentiment for Each Film\n\n# Make Plots\nggplot(sentiment_counts,aes(x=sentiment,y=n))+ \n  geom_bar(stat=\"identity\") +\n  facet_wrap(~movie)+\n  labs(title = \"Star Wars Movie Sentiments\",\n       y = \"Count\",x=\"Bing Sentiment\")\n\n\n\n\n\n\n\n\n\n\nVader’s Conversations\nI prepared all of the code for you in advance, but Vader doesn’t want you to investigate his “accidentally recorded” conversations. You and your table need to copy and paste the functions in the right order so we can visualize the sentiment of Vader’s conversations.\nYou can see a snippet of the input data by running this chunk:\n\nSW_movie_scripts |&gt; # Sends the data to the next function\n  inner_join(get_sentiments('bing')) |&gt;slice_head(n=5) |&gt; kable()\n\nJoining with `by = join_by(word)`\n\n\n\n\n\ncharacter\nmovie\nword\nsentiment\n\n\n\n\nThreepio\nEpisode IV\nmadness\nnegative\n\n\nThreepio\nEpisode IV\ndoomed\nnegative\n\n\nThreepio\nEpisode IV\nbetter\npositive\n\n\nThreepio\nEpisode IV\ntrust\npositive\n\n\nImperial Officer\nEpisode IV\ndeath\nnegative\n\n\n\n\n\nAnd now, you need to find the correct order for the filter function, count function and the pair of group_by and slice_max.\nWhen you think you have the functions in the right order, click the “play” button to see if you get a plot showing the frequencies of Vader’s positive and negative sentiment words.\n\n\nAre you fighting for the light or embracing the dark side?\nChange chosen_side with your choice, “light side” or “dark side”. It takes a minute or so to generate.\n\n# replace the quoted text with either `light side` or `dark side`\n\ncreate_SW_Wordcloud(\"light side\")\n\nWarning in wordcloud_boxes(data_points = points_valid_first, boxes = boxes, :\nSome words could not fit on page. They have been removed."
+  },
+  {
+    "objectID": "readme.html",
+    "href": "readme.html",
+    "title": "Star Wars: The Data Awakens",
+    "section": "",
+    "text": "This repo is files for a short (45 min) session for prespective students visiting Cornell College for STEM Day.\n\n\n\n\n\n\nStar Wars is owned by Lucasfilms. I do not own any of the rights to this information.\nTidy Text by Julia Silge and David Robinson\nKaggle Report by Xavier Vivancos García\nDennis Bakhuis"
+  },
+  {
+    "objectID": "readme.html#star-wars-the-data-awakens",
+    "href": "readme.html#star-wars-the-data-awakens",
+    "title": "Star Wars: The Data Awakens",
+    "section": "",
+    "text": "This repo is files for a short (45 min) session for prespective students visiting Cornell College for STEM Day.\n\n\n\n\n\n\nStar Wars is owned by Lucasfilms. I do not own any of the rights to this information.\nTidy Text by Julia Silge and David Robinson\nKaggle Report by Xavier Vivancos García\nDennis Bakhuis"
+  },
+  {
+    "objectID": "SWExplore.html#introductions",
+    "href": "SWExplore.html#introductions",
+    "title": "Star Wars: The Data Awakens",
+    "section": "Introduction’s",
+    "text": "Introduction’s\n\nProfessor Tyler George\nStudent Robin Gillette"
+  },
+  {
+    "objectID": "SWExplore.html#famous-quotes",
+    "href": "SWExplore.html#famous-quotes",
+    "title": "Star Wars: The Data Awakens",
+    "section": "Famous Quotes",
+    "text": "Famous Quotes\n\nWho has a favorite Star Wars quote?\nWould you say that quote is positive or negative?\nFamous quotes, according to The Hollywood Reporter\n\nLuke, I am your father\nJust kidding, that is not actually the real quote!"
+  },
+  {
+    "objectID": "SWExplore.html#text-analysis",
+    "href": "SWExplore.html#text-analysis",
+    "title": "Star Wars: The Data Awakens",
+    "section": "Text Analysis",
+    "text": "Text Analysis\n\nA popular technique in Data Science is text analysis.\nWhat do you think text analysis is (beyond analysis of text)?"
+  },
+  {
+    "objectID": "SWExplore.html#sentiment-analysis",
+    "href": "SWExplore.html#sentiment-analysis",
+    "title": "Star Wars: The Data Awakens",
+    "section": "Sentiment Analysis",
+    "text": "Sentiment Analysis\n\nToday you will all be trying your hand at a type of text analysis called sentiment analysis.\nAny educated guesses on what sentiment analysis is?"
+  },
+  {
+    "objectID": "SWExplore.html#activity",
+    "href": "SWExplore.html#activity",
+    "title": "Star Wars: The Data Awakens",
+    "section": "Activity",
+    "text": "Activity\n\nAt each of your tables, you have:\n\nStar Wars Movie quotes\nWhat we call a lexicon dictionary of sentiments.\n\nThis one is called Bing\nAll words are either positive or negative"
+  },
+  {
+    "objectID": "SWExplore.html#activity-instructions",
+    "href": "SWExplore.html#activity-instructions",
+    "title": "Star Wars: The Data Awakens",
+    "section": "Activity Instructions",
+    "text": "Activity Instructions\n\nFill in the table with each word of your quotes on the left and their sentiment (positive or negative) on the right.\nCount the number of positives and negatives and write your totals at the bottom.\nScan the QR code and enter your movie (IV, V, or VI). Then, you’ll see the number of positive sentiment words and negative sentiment words in your quotes.\n\nIf extra sheets are lying around, feel free to work on those quotes, too!\nYou can also respond at bit.ly/SWTDASent.\n\n\n\nShow the live plots being filled with data in Google Forms."
+  },
+  {
+    "objectID": "SWExplore.html#lets-dive-deeper",
+    "href": "SWExplore.html#lets-dive-deeper",
+    "title": "Star Wars: The Data Awakens",
+    "section": "Let’s Dive Deeper",
+    "text": "Let’s Dive Deeper\n\nWhat would we need to do if we wanted to understand the sentiment of a character or a movie as a whole?\nAt each table is 1 computer connected to the TVs at those desks.\nEach computer has a program called RStudio on the screen, which allows you to program in the language R.\nR is a statistical analysis programming language and is one of the two most common languages in the field of data science (Python is the other)"
+  },
+  {
+    "objectID": "SWExplore.html#what-you-will-need",
+    "href": "SWExplore.html#what-you-will-need",
+    "title": "Star Wars: The Data Awakens",
+    "section": "What you will need…",
+    "text": "What you will need…\nA row of a dataset runs left to right. A column of a dataset is verticle (think the lettered columns in a Google Sheet).\n\nfilter: This function is keeping rows with words spoken by “Vader”\ncount: This function is counting how many times each word appeared\ngroup_by and slice_max: These functions are taking the counts, keeping the top 5 most common words that have positive sentiment and that have negative sentiment."
+  },
+  {
+    "objectID": "SWExplore.html#a-more-advanced-analysis",
+    "href": "SWExplore.html#a-more-advanced-analysis",
+    "title": "Star Wars: The Data Awakens",
+    "section": "A More Advanced Analysis",
+    "text": "A More Advanced Analysis\n\nDennis Bakhuis scraped all of Wookipedias information on Star Wars\nHe posted all of his work HERE.\nOne amazing result is a network plot."
+  },
+  {
+    "objectID": "SWExplore.html#acknowledgements",
+    "href": "SWExplore.html#acknowledgements",
+    "title": "Star Wars: The Data Awakens",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\nStar Wars is owned by Lucasfilms. I do not own any of the rights to this information.\nTidy Text by Julia Silge and David Robinson\nKaggle Report by Xavier Vivancos García"
+  }
+]

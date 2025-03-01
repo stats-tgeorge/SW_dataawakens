@@ -1,0 +1,114 @@
+---
+title: "Star Wars: The Data Awakens "
+subtitle: "Welcome to Cornell College!"
+author: Tyler George
+format: 
+  revealjs:
+    footer: "Slides at [bit.ly/MVHS-C-DS](https://bit.ly/MVHS-C-DS)"
+    theme: custom.scss
+    transition: fade
+    slide-number: true
+    highlight-style: a11y-dark
+    embed-resources: true
+    echo: true
+    message: false
+    warning: false
+    include: true
+    incremental: true
+    cache: true
+    logo: imgs/cornell_logo.png
+---
+
+## Introduction's
+
+-   Professor Tyler George
+
+-   Student Robin Gillette
+
+## Famous Quotes
+
+-   Who has a favorite Star Wars quote?
+
+-   Would you say that quote is positive or negative? 
+
+-   Famous quotes, according to [The Hollywood Reporter](https://www.hollywoodreporter.com/lists/best-star-wars-quotes/may-the-force-be-with-you-3/)
+    * Luke, I am your father
+    * Just kidding, that is not actually the real quote! 
+
+## Text Analysis
+
+-   A popular technique in Data Science is **text analysis**.
+
+-   What do you think **text analysis** is (beyond *analysis of text*)?
+
+## Sentiment Analysis
+
+-   Today you will all be trying your hand at a type of text analysis called **sentiment analysis**.
+
+-   Any educated guesses on what **sentiment analysis** is?
+
+## Activity {.smaller}
+
+-   At each of your tables, you have:
+    -   Star Wars Movie quotes
+    -   What we call a **lexicon** dictionary of sentiments.
+        -   This one is called [*Bing*](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html)
+        -   All words are either positive or negative
+
+## Activity Instructions {.smaller}
+
+-   Fill in the table with each word of your quotes on the left and their sentiment (positive or negative) on the right.
+
+-   Count the number of positives and negatives and write your totals at the bottom.
+
+-   Scan the QR code and enter your movie (IV, V, or VI). Then, you'll see the number of positive sentiment words and negative sentiment words in your quotes.
+    
+    - If extra sheets are lying around, feel free to work on those quotes, too!
+    
+    - You can also respond at [bit.ly/SWTDASent](bit.ly/SWTDASent).
+
+:::{.notes}
+Show the live plots being filled with data in Google Forms.
+:::
+
+## Let's Dive Deeper {.smaller}
+
+-   What would we need to do if we wanted to understand the sentiment of a character or a movie as a whole?
+
+-   At each table is 1 computer connected to the TVs at those desks.
+
+-   Each computer has a program called RStudio on the screen, which allows you to program in the language R.
+
+-   R is a statistical analysis programming language and is one of the two most common languages in the field of data science (Python is the other)
+
+## What you will need... {.smaller}
+
+A *row* of a dataset runs left to right. A *column* of a dataset is verticle (think the lettered columns in a Google Sheet).
+
+- filter: This function is keeping rows with words spoken by "Vader"
+
+- count: This function is counting how many times each word appeared
+
+- group_by and slice_max: These functions are taking the counts, keeping the top 5 most common words that have positive sentiment and that have negative sentiment. 
+
+
+
+
+
+
+## A More Advanced Analysis
+
+- Dennis Bakhuis scraped all of Wookipedias information on Star Wars
+
+- He posted all of his work [HERE](https://github.com/dennisbakhuis/wookieepediascience). 
+
+- One amazing result is a [network plot](https://dennisbakhuis.github.io/wookieepediascience/).
+
+
+## Acknowledgements
+
+- Star Wars is owned by Lucasfilms. I do not own any of the rights to this information.
+
+- [Tidy Text](https://www.tidytextmining.com/) by Julia Silge and David Robinson
+
+- [Kaggle Report](https://www.kaggle.com/code/xvivancos/analyzing-star-wars-movie-scripts/report) by Xavier Vivancos García

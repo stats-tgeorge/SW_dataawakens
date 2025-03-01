@@ -1,0 +1,131 @@
+---
+title: "Star Wars at Cornell"
+format: html
+editor_options: 
+  chunk_output_type: console
+  
+eval: false
+editor: visual
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+source('SWDataPrep.R')
+```
+
+To start, we want to investigate what you did by hand; how many words in each film were positive? How many were negative?
+
+### Counting Sentiments for Each Film
+
+The following code can be run by clicking the green play button on the right.
+
+This first part gets the sentiments from a dictionary, just like you did!
+
+```{r}
+sentiments <- 
+  SW_movie_scripts |> 
+  inner_join(get_sentiments('bing')) # This does what you did for each word for every line in the original 3 films
+
+sentiments  |> slice_head(n=5) |> kable()
+
+```
+
+Now, the count function counts how many positive and negative words for each film.
+
+```{r}
+
+sentiment_counts <-
+  sentiments |> 
+  count(movie,sentiment) # Adds up each positive and negative for each film
+
+sentiment_counts |> slice_head(n=5) |> kable()
+```
+
+We don't want to look at a table that is 1000's of rows long, let's make a graph!
+
+### Visualizing Sentiment for Each Film
+
+```{r}
+# Make Plots
+ggplot(sentiment_counts,aes(x=sentiment,y=n))+ 
+  geom_bar(stat="identity") +
+  facet_wrap(~movie)+
+  labs(title = "Star Wars Movie Sentiments",
+       y = "Count",x="Bing Sentiment")
+```
+
+### Vader's Conversations
+
+I prepared all of the code for you in advance, but Vader doesn't want you to investigate his "accidentally recorded" conversations. You and your table need to copy and paste the functions in the right order so we can visualize the sentiment of Vader's conversations.
+
+You can see a snippet of the input data by running this chunk:
+
+```{r}
+SW_movie_scripts |> # Sends the data to the next function
+  inner_join(get_sentiments('bing')) |>slice_head(n=5) |> kable()
+  
+```
+
+And now, you need to find the correct order for the `filter` function, `count` function and the pair of `group_by` and `slice_max`.
+
+When you think you have the functions in the right order, click the "play" button to see if you get a plot showing the frequencies of Vader's positive and negative sentiment words.
+
+```{r}
+#| include: false
+#| echo: false
+#| eval: false
+
+## Leave this top part as well
+SW_movie_scripts |> # Sends the data to the next function
+  inner_join(get_sentiments('bing'))|>
+  
+
+#------------------
+
+
+
+
+  count(word,sentiment,sort = T) |> # Frequency of each word
+  
+
+  
+  
+  group_by(sentiment)|>         # Together, these grab the top 5 most commmon
+  slice_max(n,n=5) |>           # positive and negative words
+
+  
+  
+
+
+  
+  filter(character == "Vader")|> # Picks vader as our character of interest
+
+  
+  
+  
+  
+#------------------
+
+  ## This part you can leave alone
+  mutate(word = reorder(word,n))|> # Reorders for plotting
+  ggplot(aes(n,word,fill = sentiment))+
+    geom_col(show.legend = F)+
+    facet_wrap(~sentiment,scales = "free_y")+
+    labs(x = "Contribution to Sentiment",title = "Vaders Conversations",y="")
+
+```
+
+### Are you fighting for the light or embracing the dark side?
+
+There are more fun ways to visualize word counts than a graph!
+
+Change `chosen_side` with your choice, "light side" or "dark side". It takes a minute or so to generate.
+
+```{r}
+# replace the quoted text with either `light side` or `dark side`
+
+create_SW_Wordcloud(chosen_side)
+
+```

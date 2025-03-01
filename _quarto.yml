@@ -1,0 +1,5 @@
+project:
+  type: website
+  title: "Star Wars: The Data Awakens"
+  output-dir: docs
+editor: source
