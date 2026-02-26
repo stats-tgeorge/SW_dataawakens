@@ -13,3 +13,11 @@ star_wars_quotes |>
   inner_join(get_sentiments('bing')) |>
   select(word,sentiment)|>
   write_csv('data/quote_sentiments.csv')
+
+
+
+library("starwarsdb")
+
+starwars_db()
+
+data(package = "starwarsdb")

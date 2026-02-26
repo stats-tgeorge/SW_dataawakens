@@ -1,0 +1,8 @@
+1) Print 6 sentiment afinn tables
+2) Print each of the 6 different script chunks
+3) Start up all 6 computers
+4) Use my computer to upload new 
+    SW_Particpant_File_Answers.qmd and
+    SWDataPrep.R
+    script_data.rds
+   

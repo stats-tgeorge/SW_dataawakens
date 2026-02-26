@@ -39,7 +39,7 @@
     "href": "SWExplore.html#text-analysis",
     "title": "Star Wars: The Data Awakens",
     "section": "Text Analysis",
-    "text": "Text Analysis\n\nA popular technique in Data Science is text analysis.\nWhat do you think text analysis is (beyond analysis of text)?"
+    "text": "Text Analysis\n\ntext analysis is a widely used technique in Data Science.\nWhat do you think text analysis is used for?"
   },
   {
     "objectID": "SWExplore.html#sentiment-analysis",
@@ -53,21 +53,21 @@
     "href": "SWExplore.html#activity",
     "title": "Star Wars: The Data Awakens",
     "section": "Activity",
-    "text": "Activity\n\nAt each of your tables, you have:\n\nStar Wars Movie quotes\nWhat we call a lexicon dictionary of sentiments.\n\nThis one is called Bing\nAll words are either positive or negative"
+    "text": "Activity\n\nAt each of your tables, you have:\n\nStar Wars Movie script piece. Each table has a piece of the Episode IV script.\nA lexicon, or a dictionary with sentiment scores.\n\nThis one is called AFINN\nAll words go between a -5 and a +5.\n\n\n\n\n\nThe AFINN lexicon is a list of English terms manually rated for valence with an integer between -5 (negative) and +5 (positive) by Finn Årup Nielsen between 2009 and 2011."
   },
   {
     "objectID": "SWExplore.html#activity-instructions",
     "href": "SWExplore.html#activity-instructions",
     "title": "Star Wars: The Data Awakens",
     "section": "Activity Instructions",
-    "text": "Activity Instructions\n\nFill in the table with each word of your quotes on the left and their sentiment (positive or negative) on the right.\nCount the positives and negatives and write your totals at the bottom.\nScan the QR code and enter your movie (IV, V, or VI) and the number of positive sentiment words and negative sentiment words in your quote(s).\n\nIf extra sheets are lying around, feel free to work on those quotes, too!\nYou can also respond at bit.ly/SWTDASent.\n\n\n\nShow the live plots being filled with data in Google Forms."
+    "text": "Activity Instructions\nGOAL: Calculate the average sentiment of your script piece."
   },
   {
     "objectID": "SWExplore.html#lets-dive-deeper",
     "href": "SWExplore.html#lets-dive-deeper",
     "title": "Star Wars: The Data Awakens",
     "section": "Let’s Dive Deeper",
-    "text": "Let’s Dive Deeper\n\nWhat would we need to do to understand the sentiment of a character or a movie?\nAt each table is one computer connected to the TVs at those desks.\nEach computer has a program called RStudio on the screen, which allows you to program in the language R.\nR is a statistical analysis programming language and is one of the two most common languages in the field of data science (Python is the other)"
+    "text": "Let’s Dive Deeper\n\nWe have the whole script from Episode IV (and more)\nAt each table is one computer connected to the TVs at those desks.\nEach computer has a program called RStudio on the screen, which allows you to program in the language R.\nR is a statistical analysis programming language and is one of the two most common languages in the field of data science (Python is the other)"
   },
   {
     "objectID": "SWExplore.html#what-you-will-need",
@@ -103,5 +103,19 @@
     "title": "Star Wars: The Data Awakens",
     "section": "Acknowledgments",
     "text": "Acknowledgments\n\nStar Wars is owned by Lucasfilms. I do not have any rights to this information.\nTidy Text by Julia Silge and David Robinson\nKaggle Report by Xavier Vivancos García"
+  },
+  {
+    "objectID": "SWExplore.html#work-together",
+    "href": "SWExplore.html#work-together",
+    "title": "Star Wars: The Data Awakens",
+    "section": "Work Together",
+    "text": "Work Together\n\nLet’s bring this together.\nAll of you data collected is a random sample\nCan we use your sample to estimate the sentiment of the whole film?"
+  },
+  {
+    "objectID": "SWExplore.html#look-at-the-code",
+    "href": "SWExplore.html#look-at-the-code",
+    "title": "Star Wars: The Data Awakens",
+    "section": "Look at the code",
+    "text": "Look at the code"
   }
 ]

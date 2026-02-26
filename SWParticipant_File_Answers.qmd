@@ -23,49 +23,57 @@ This first part gets the sentiments from a dictionary, just like you did!
 ```{r}
 sentiments <- 
   SW_movie_scripts |> 
-  inner_join(get_sentiments('bing')) # This does what you did for each word for every line in the original 3 films
+  # This does what you did for each word for every line in the original 3 films
+  inner_join(get_sentiments('afinn')) |>
+  rename(sentiment = value)
 
-sentiments  |> slice_head(n=5) |> kable()
+sentiments  |>   filter(movie == "Episode IV")|> 
+  slice_head(n=10) |> 
+  kable()
 
 ```
 
-Now, the count function counts how many positive and negative words for each film.
+Now, we can take get the average sentiment per film.
+- The group_by function tells R we want our calculations to be by group, rather than overall
+- In this case, it tells R we want the mean sentiment for each movie.
 
 ```{r}
 
 sentiment_counts <-
   sentiments |> 
-  count(movie,sentiment) # Adds up each positive and negative for each film
+  group_by(movie)|>
+  summarize(average_sentiment = mean(sentiment)) # Average sentiment for each film
 
-sentiment_counts |> slice_head(n=5) |> kable()
+sentiment_counts |> kable()
+
 ```
 
 ### Visualizing Sentiment for Each Film
 
 ```{r}
 # Make Plots
-ggplot(sentiment_counts,aes(x=sentiment,y=n))+ 
-  geom_bar(stat="identity") +
-  facet_wrap(~movie)+
+ggplot(sentiment_counts,aes(y=movie,x=average_sentiment))+ 
+  geom_col() +
   labs(title = "Star Wars Movie Sentiments",
-       y = "Count",x="Bing Sentiment")
+       y = "Movie",x="AFINN Sentiment")
 ```
 
 ### Vader's Conversations
 
-I prepared all of the code for you in advance, but Vader doesn't want you to investigate his "accidentally recorded" conversations. You and your table need to copy and paste the functions in the right order so we can visualize the sentiment of Vader's conversations.
+Is Vader such a bad guy? Let's measure his feelings using his words.
 
-You can see a snippet of the input data by running this chunk:
+We are going to
 
-```{r}
-SW_movie_scripts |> # Sends the data to the next function
-  inner_join(get_sentiments('bing')) |>slice_head(n=5) |> kable()
-  
-```
+1) Filter out only Vader's lines from the Episodes IV, V, and VI
+2) Get the AFINN sentiment for his words
+3) Get an overall average sentiment of his words
 
-And now, you need to find the correct order for the `filter` function, `count` function and the pair of `group_by` and `slice_max`.
+### Step 1: Filter out Vader's Lines
 
-When you think you have the functions in the right order, click the "play" button to see if you get a plot showing the frequencies of Vader's positive and negative sentiment words.
+### Step 2: Join AFINN sentiments for each of his words
+
+### Step 3: Get the average sentiment of his words
+
 
 ```{r}
 #| include: false
@@ -74,38 +82,50 @@ When you think you have the functions in the right order, click the "play" butto
 
 ## Leave this top part as well
 SW_movie_scripts |> # Sends the data to the next function
-  inner_join(get_sentiments('bing'))|>
-  
 
-#------------------
-  filter(character == "Vader")|> # Picks vader as our character of interest
-  
-  
-  
-  count(word,sentiment,sort = T) |> # Frequency of each word
-  
-  
-  
-  group_by(sentiment)|>         # Together, these grab the top 5 most commmon
-  slice_max(n,n=5) |>           # positive and negative words
 
-  
-#------------------
+# CODE LINES (copy and past them into the right steps)
+  inner_join(get_sentiments('afinn'))|>
+  summarize(average_sentiment = mean(value))|>
+  filter(character == "Vader")|> # Picks Vader as our character of interest
 
-  ## This part you can leave alone
-  mutate(word = reorder(word,n))|> # Reorders for plotting
-  ggplot(aes(n,word,fill = sentiment))+
+##### Cut in paste into the correct steps
+
+## STEP 1
+
+
+## STEP 2
+
+
+## STEP 3
+
+
+  kable() # Leave alone
+
+```
+
+
+### Vaders Sentiment Throughout the Movies
+
+```{r}
+
+SW_movie_scripts |> # Sends the data to the next function
+  filter(character == "Vader")|> # Picks Vader as our character of interest
+  inner_join(get_sentiments('afinn'))|>
+  group_by(movie) |> 
+  summarize(average_sentiment = mean(value))|>
+  ggplot(aes(x=average_sentiment,y= movie))+
     geom_col(show.legend = F)+
-    facet_wrap(~sentiment,scales = "free_y")+
     labs(x = "Contribution to Sentiment",title = "Vaders Conversations",y="")
 
 ```
 
 ### Are you fighting for the light or embracing the dark side?
 
-Change `chosen_side` with your choice, "light side" or "dark side". It takes a minute or so to generate.
+Change `chosen_side` with your choice, "light side" or "dark side". It takes a minute to generate.
 
 ```{r}
+#| warning: false
 # replace the quoted text with either `light side` or `dark side`
 
 create_SW_Wordcloud("light side")

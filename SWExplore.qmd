@@ -24,22 +24,11 @@ format:
 
 -   Student Robin Gillette
 
-## Famous Quotes
-
--   Who has a favorite Star Wars quote?
-
--   Would you say that quote is positive or negative?
-
--   Famous quotes, according to [The Hollywood Reporter](https://www.hollywoodreporter.com/lists/best-star-wars-quotes/may-the-force-be-with-you-3/)
-
-    -   Luke, I am your father
-    -   Just kidding, that is not the real quote!
-
 ## Text Analysis
 
--   A popular technique in Data Science is **text analysis**.
+-   **text analysis** is a widely used technique in Data Science. 
 
--   What do you think **text analysis** is (beyond *analysis of text*)?
+-   What do you think **text analysis** is used for?
 
 ## Sentiment Analysis
 
@@ -50,30 +39,32 @@ format:
 ## Activity {.smaller}
 
 -   At each of your tables, you have:
-    -   Star Wars Movie quotes
-    -   What we call a **lexicon** dictionary of sentiments.
-        -   This one is called [*Bing*](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html)
-        -   All words are either positive or negative
+    -   Star Wars Movie script piece. Each table has a piece of the Episode IV script. 
+    -   A **lexicon**, or a dictionary with sentiment scores.
+        -   This one is called [*AFINN*](http://corpustext.com/reference/sentiment_afinn.html)
+        -   All words go between a -5 and a +5.
+
+::: aside
+The AFINN lexicon is a list of English terms manually rated for valence with an integer between -5 (negative) and +5 (positive) by Finn Årup Nielsen between 2009 and 2011.
+:::
 
 ## Activity Instructions {.smaller}
 
--   Fill in the table with each word of your quotes on the left and their sentiment (positive or negative) on the right.
+GOAL: Calculate the average sentiment of your script piece. 
 
--   Count the positives and negatives and write your totals at the bottom.
 
--   Scan the QR code and enter your movie (IV, V, or VI) and the number of positive sentiment words and negative sentiment words in your quote(s).
+## Work Together {.smaller}
 
-    -   If extra sheets are lying around, feel free to work on those quotes, too!
+- Let's bring this together. 
 
-    -   You can also respond at [bit.ly/SWTDASent](bit.ly/SWTDASent).
+- All of you data collected is a *random sample*
 
-::: notes
-Show the live plots being filled with data in Google Forms.
-:::
+- Can we use your sample to estimate the sentiment of the whole film?
+
 
 ## Let's Dive Deeper {.smaller}
 
--   What would we need to do to understand the sentiment of a character or a movie?
+-   We have the whole script from Episode IV (and more)
 
 -   At each table is one computer connected to the TVs at those desks.
 
@@ -81,15 +72,7 @@ Show the live plots being filled with data in Google Forms.
 
 -   R is a statistical analysis programming language and is one of the two most common languages in the field of data science (Python is the other)
 
-## What you will need... {.smaller}
-
-A *row* of a dataset runs left to right. A *column* of a dataset is verticle (think the lettered columns in a Google Sheet).
-
--   filter: This function keeps rows with words spoken by "Vader"
-
--   count: This function counts how many times each word appeared
-
--   group_by and slice_max: These functions are taking the counts, keeping the top 5 most common words that have positive sentiment and that have negative sentiment.
+## Look at the code
 
 ## A More Advanced Analysis
 
