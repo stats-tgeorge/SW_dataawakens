@@ -26,7 +26,7 @@ format:
 
 ## Text Analysis
 
--   **text analysis** is a widely used technique in Data Science. 
+-   **text analysis** is a widely used technique in Data Science.
 
 -   What do you think **text analysis** is used for?
 
@@ -39,7 +39,7 @@ format:
 ## Activity {.smaller}
 
 -   At each of your tables, you have:
-    -   Star Wars Movie script piece. Each table has a piece of the Episode IV script. 
+    -   Star Wars Movie script piece. Each table has a piece of the Episode IV script.
     -   A **lexicon**, or a dictionary with sentiment scores.
         -   This one is called [*AFINN*](http://corpustext.com/reference/sentiment_afinn.html)
         -   All words go between a -5 and a +5.
@@ -50,17 +50,15 @@ The AFINN lexicon is a list of English terms manually rated for valence with an 
 
 ## Activity Instructions {.smaller}
 
-GOAL: Calculate the average sentiment of your script piece. 
-
+GOAL: Calculate the average sentiment of your script piece.
 
 ## Work Together {.smaller}
 
-- Let's bring this together. 
+-   Let's bring this together.
 
-- All of you data collected is a *random sample*
+-   All of the data collected is a *random sample*
 
-- Can we use your sample to estimate the sentiment of the whole film?
-
+-   Can we use your sample to estimate the film's overall sentiment?
 
 ## Let's Dive Deeper {.smaller}
 
@@ -84,11 +82,42 @@ GOAL: Calculate the average sentiment of your script piece.
 
 ## Data Science and Statistics at Cornell
 
--   Courses take advantage of the block plan, where we can learn and practice a concept in class.
+-   Courses take advantage of the block plan, which allows us to learn and practice a concept in class.
 
--   Interactive labs in most of our major courses.
+-   Interactive labs in our major courses.
 
--   Competitions, conferences, socials and more.
+-   Learn and apply at the same time, same day
+
+-   Learn like on-the-job, so you are ready for jobs!
+
+-   Competitions, [Minne MUDAC](https://minneanalytics.org/minnemudac/)
+
+## Data Science and Statistics at Cornell
+
+-   Department and cross-institution socials
+
+-   Conferences (photos)
+
+## Beyond the Block Plan
+
+-   Community Engaged Statistics
+
+-   The [History of Statistics in the British Isles](https://stats-tgeorge.quarto.pub/history-of-stats-uk-ireland/)
+
+-   Brand new incoming collaborative classroom
+
+-   Research experience on and off campus
+
+    -   CSRI
+    -   NSF REUs
+
+## Will I Get a Job?
+
+-   Insurance companies in Des Moines
+
+-   EPIC in Wisconsin
+
+-   Graduate School
 
 ## Acknowledgments
 
